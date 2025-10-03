@@ -12,8 +12,8 @@
 
 ## Participantes
 
-- [Gustavo](https://github.com/xxx)
-- [Ícaro](https://github.com/xxx)
+- [Gustavo](https://github.com/GusTTrand)
+- [Ícaro](https://github.com/Icaro2703)
 - [João](https://github.com/JVYazbek)
 - [Kayla](https://github.com/JohnnyD3pp)
 - [Luccas Toffano](https://github.com/toffan0)
