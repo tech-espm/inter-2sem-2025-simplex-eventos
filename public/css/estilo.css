@@ -12,7 +12,7 @@ html, body {
 	margin: 0px;
 
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
-	min-height: 100vh;
+	min-height: 80vh;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
