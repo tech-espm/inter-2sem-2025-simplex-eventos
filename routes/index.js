@@ -7,41 +7,41 @@ router.get("/", wrap(async (req, res) => {
 	res.render("index/index");
 }));
 
-router.get("/sobre", wrap(async (req, res) => {
+router.get("/perfil", wrap(async (req, res) => {
 	let opcoes = {
-		titulo: "Sobre"
+		titulo: "Perfil"
 	};
 
-	res.render("index/sobre", opcoes);
+	res.render("index/perfil", opcoes);
 }));
 
-router.get("/produtos", wrap(async (req, res) => {
-	let produtoA = {
+router.get("/eventos", wrap(async (req, res) => {
+	let eventoA = {
 		id: 1,
-		nome: "Produto A",
+		nome: "Evento A",
 		valor: 25
 	};
 
-	let produtoB = {
+	let eventoB = {
 		id: 2,
-		nome: "Produto B",
+		nome: "Evento B",
 		valor: 15
 	};
 
-	let produtoC = {
+	let eventoC = {
 		id: 3,
-		nome: "Produto C",
+		nome: "Evento C",
 		valor: 100
 	};
 
-	let produtosVindosDoBanco = [ produtoA, produtoB, produtoC ];
+	let eventosVindosDoBanco = [ eventoA, eventoB, eventoC ];
 
 	let opcoes = {
-		titulo: "Listagem de Produtos",
-		produtos: produtosVindosDoBanco
+		titulo: "Listagem de Eventos",
+		produtos: eventosVindosDoBanco
 	};
 
-	res.render("index/produtos", opcoes);
+	res.render("index/eventos", opcoes);
 }));
 
 module.exports = router;
