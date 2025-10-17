@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2563EB; /* blue-600 - Trust-building foundation for key decisions */
+  --color-primary-50: #EFF6FF; /* blue-50 */
+  --color-primary-100: #DBEAFE; /* blue-100 */
+  --color-primary-200: #BFDBFE; /* blue-200 */
+  --color-primary-300: #93C5FD; /* blue-300 */
+  --color-primary-400: #60A5FA; /* blue-400 */
+  --color-primary-500: #3B82F6; /* blue-500 */
+  --color-primary-600: #2563EB; /* blue-600 */
+  --color-primary-700: #1D4ED8; /* blue-700 */
+  --color-primary-800: #1E40AF; /* blue-800 */
+  --color-primary-900: #1E3A8A; /* blue-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #1E40AF; /* blue-800 - Professional depth for navigation elements */
+  --color-secondary-50: #EFF6FF; /* blue-50 */
+  --color-secondary-100: #DBEAFE; /* blue-100 */
+  --color-secondary-200: #BFDBFE; /* blue-200 */
+  --color-secondary-300: #93C5FD; /* blue-300 */
+  --color-secondary-400: #60A5FA; /* blue-400 */
+  --color-secondary-500: #3B82F6; /* blue-500 */
+  --color-secondary-600: #2563EB; /* blue-600 */
+  --color-secondary-700: #1D4ED8; /* blue-700 */
+  --color-secondary-800: #1E40AF; /* blue-800 */
+  --color-secondary-900: #1E3A8A; /* blue-900 */
+
+  /* Accent Colors */
+  --color-accent: #F59E0B; /* amber-500 - Confident energy for primary actions */
+  --color-accent-50: #FFFBEB; /* amber-50 */
+  --color-accent-100: #FEF3C7; /* amber-100 */
+  --color-accent-200: #FDE68A; /* amber-200 */
+  --color-accent-300: #FCD34D; /* amber-300 */
+  --color-accent-400: #FBBF24; /* amber-400 */
+  --color-accent-500: #F59E0B; /* amber-500 */
+  --color-accent-600: #D97706; /* amber-600 */
+  --color-accent-700: #B45309; /* amber-700 */
+  --color-accent-800: #92400E; /* amber-800 */
+  --color-accent-900: #78350F; /* amber-900 */
+
+  /* Background Colors */
+  --color-background: #FEFEFE; /* gray-50 - Clean canvas for content focus */
+  --color-surface: #F8FAFC; /* slate-50 - Subtle elevation without distraction */
+
+  /* Text Colors */
+  --color-text-primary: #1F2937; /* gray-800 - Extended reading comfort and clarity */
+  --color-text-secondary: #6B7280; /* gray-500 - Clear hierarchy without harsh contrast */
+
+  /* Status Colors */
+  --color-success: #10B981; /* emerald-500 - Positive reinforcement for achievements */
+  --color-success-50: #ECFDF5; /* emerald-50 */
+  --color-success-100: #D1FAE5; /* emerald-100 */
+  --color-success-500: #10B981; /* emerald-500 */
+  --color-success-600: #059669; /* emerald-600 */
+
+  --color-warning: #F59E0B; /* amber-500 - Helpful urgency without alarm */
+  --color-warning-50: #FFFBEB; /* amber-50 */
+  --color-warning-100: #FEF3C7; /* amber-100 */
+  --color-warning-500: #F59E0B; /* amber-500 */
+  --color-warning-600: #D97706; /* amber-600 */
+
+  --color-error: #EF4444; /* red-500 - Supportive concern for corrections needed */
+  --color-error-50: #FEF2F2; /* red-50 */
+  --color-error-100: #FEE2E2; /* red-100 */
+  --color-error-500: #EF4444; /* red-500 */
+  --color-error-600: #DC2626; /* red-600 */
+
+  /* Border Colors */
+  --color-border: #E5E7EB; /* gray-200 - Clean borders for form inputs and content separation */
+  --color-border-light: #F3F4F6; /* gray-100 */
+}
+
+/* Custom Components */
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-primary border border-primary font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6 transition-all duration-300 ease-out;
+  }
+
+  .card-hover {
+    @apply hover:shadow-md hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-primary transition-all duration-200 ease-out;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+}
+
+/* Custom Animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 400ms ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 400ms ease-in-out;
+  }
+
+  .transition-smooth {
+    transition: all 300ms ease-out;
+  }
+
+  .transition-quick {
+    transition: all 200ms ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Shadows */
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-elevation {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
