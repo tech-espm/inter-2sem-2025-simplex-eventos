@@ -15,6 +15,14 @@ router.get("/perfil", wrap(async (req, res) => {
 	res.render("index/perfil", opcoes);
 }));
 
+router.get("/dashboard", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Dashboard"
+	};
+
+	res.render("index/dashboard", opcoes);
+}));
+
 router.get("/eventos", wrap(async (req, res) => {
 	let eventoA = {
 		id: 1,

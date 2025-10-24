@@ -49,9 +49,9 @@
 	<h1 class="alinhar-col">Recursos que Fazem a Diferença</h1>
 	<h5 class="alinhar-col h5-recursos">Descubra as ferramentas que tornam a criação e gestão de eventos uma experiência simples e eficiente</h5>
 
-			<div class="row alinhar-col">
+			<div class="row alinhar-col justify-content-center">
 
-				<div class="col-sm-3 col-lg-4 espacador-coluna">
+				<div class="col-sm-6 col-md-4 espacador-coluna">
 					<div class="fundo-coluna borda">
 						<p>
 							<img width="80" src="https://cdn-icons-png.flaticon.com/512/5969/5969559.png" />
@@ -65,7 +65,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-3 col-lg-4 espacador-coluna">
+				<div class="col-sm-6 col-md-4 espacador-coluna">
 					<div class="fundo-coluna borda">
 						<p>
 							<img  width="80" src="https://images.vexels.com/media/users/3/234467/isolated/preview/74f0609f9316051f07af9de18f1b977c-traco-colorido-do-alarme-do-relogio-analogico.png" />
@@ -79,7 +79,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-3 col-lg-4 espacador-coluna">
+				<div class="col-sm-6 col-md-4 espacador-coluna">
 					<div class="fundo-coluna borda">
 						<p>
 							<img width="80" src="https://cdn-icons-png.flaticon.com/512/8899/8899687.png" />
@@ -99,22 +99,13 @@
 <%- contentFor("espaco-head") %>
 <style>
 
-	.limitador {
-	max-width: 1280px;
-	margin: 0px;
-
-	min-height: 80vh;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-}
-
 	.conteudo {
 		min-height: 80vh;
-		background-image: url(https://img.freepik.com/free-vector/modern-abstract-blue-background-with-dark-gradient-geometric-layers-technology-corporate-design_361591-5458.jpg?semt=ais_hybrid&w=740&q=80);
+		background-image: url(/public/img/fundo.jpg);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-attachment: fixed;
 		color: white;
 	}
 
@@ -163,10 +154,15 @@
 	background-color: rgb(19, 3, 125);
 	padding: 15px;
 	border-radius: 5px;
+	min-height: 100%;
 }
 
 .secao3{
 	padding-bottom: 60px;
+}
+
+.espacador-coluna {
+	padding: 12px;
 }
 
 </style>
