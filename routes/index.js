@@ -7,6 +7,14 @@ router.get("/", wrap(async (req, res) => {
 	res.render("index/index");
 }));
 
+router.get("/sobreaequipe", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Sobre a Equipe"
+	};
+
+	res.render("index/sobreaequipe", opcoes);
+}));
+
 router.get("/perfil", wrap(async (req, res) => {
 	let opcoes = {
 		titulo: "Perfil"
