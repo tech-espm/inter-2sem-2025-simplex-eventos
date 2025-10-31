@@ -1,11 +1,171 @@
-<div class="container-fluid">
+<div class="conteudo">
+    <div class="container-fluid" style="padding-top: 120px; padding-bottom: 120px;">
 
-	<h1>
-		Sobre
-	</h1>
+        <h1 class="h1-home alinhar-col">
+            Meu <span class="titulo-simplex">Perfil</span>
+        </h1>
+        <h5 class="alinhar-col h5-recursos">Gerencie suas informações e eventos</h5>
+        <br>
 
-	<p>
-		Sobre nós! 😊
-	</p>
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                
+                <div class="fundo-coluna borda" style="padding: 30px;">
+                    <div class="row align-items-center">
+                        
+                        <div class="col-md-4 alinhar-col">
+                            
+                            <img src="https://avatar.iran.liara.run/public/girl?username=ana.silva" alt="Foto de Perfil" class="img-fluid rounded-circle borda" style="width: 150px; height: 150px; object-fit: cover;">
+                            
+                            <a href="/editar-perfil" class="btn btn-primary d-block mt-3" style="background-color: rgb(41,137,216); border-color: rgb(41,137,216);">
+                                Editar Perfil
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-8 info-perfil">
 
+                            <h2 class="h2-home" style="text-align: left; margin-bottom: 20px;">Ana Silva</h2>
+                            <p>
+                                <i class="fas fa-envelope"></i> ana.silva@simplex.com
+                            </p>
+                            <p>
+                                <i class="fas fa-calendar-alt"></i> Membro desde: 15 de Março de 2024
+                            </p>
+                            <p>
+                                <i class="fas fa-ticket-alt"></i> Eventos criados: 3
+                            </p>
+                            <br>
+                            <a href="/logout" class="btn btn-outline-light">
+                                Sair da Conta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="padding-top: 80px;">
+            <div class="col-12 alinhar-col">
+                <h1 class="h1-sobre">Meus Eventos</h1>
+                <h5 class="h5-recursos">Eventos que você criou ou está participando</h5>
+            </div>
+
+            <div class="col-sm-6 col-md-4 espacador-coluna">
+                <div class="fundo-coluna borda">
+                    <h2>Conferência de Tecnologia</h2>
+                    <p>Data: 01/12/2025</p>
+                    <p>Status: <span style="color: #28a745;">Ativo</span></p>
+                    <a href="#" class="btn btn-outline-light btn-sm">Gerenciar Evento</a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 espacador-coluna">
+                <div class="fundo-coluna borda">
+                    <h2>Workshop de Design</h2>
+                    <p>Data: 15/01/2026</p>
+                    <p>Status: <span style="color: #ffc107;">Rascunho</span></p>
+                    <a href="#" class="btn btn-outline-light btn-sm">Continuar Edição</a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 espacador-coluna">
+                <div class="fundo-coluna borda">
+                    <h2>Encontro Comunitário</h2>
+                    <p>Data: 01/09/2025</p>
+                    <p>Status: <span style="color: #dc3545;">Concluído</span></p>
+                    <a href="#" class="btn btn-outline-light btn-sm">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+
+<%- contentFor("espaco-head") %>
+<style>
+
+	.conteudo {
+		min-height: 80vh;
+		background-image: url(/public/img/fundo.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		color: white;
+	}
+
+	.titulo-simplex{
+		color: rgb(41,137,216);
+	}
+
+	.h1-home{
+		font-size: 50px;
+		text-align: center;
+		color: white;
+	}
+
+	.h2-home{
+		text-align: center;
+		color: white;
+	}
+
+	.h1-sobre{
+		padding-bottom: 15px;
+        color: white;
+	}
+
+	.borda{
+		border-radius: 20px;
+		border-color: white;
+		border-style: solid;
+	}
+
+	.alinhar-col{
+		text-align: center;
+	}
+
+	.h5-recursos{
+		padding-bottom: 60px;
+        color: white;
+	}
+
+	.fundo-coluna {
+		background-color: rgb(19, 3, 125);
+		padding: 15px;
+		border-radius: 5px;
+		min-height: 100%;
+	}
+
+	.espacador-coluna {
+		padding: 12px;
+	}
+    
+    .info-perfil p {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .info-perfil i {
+        margin-right: 12px;
+        color: rgb(41,137,216);
+        width: 20px;
+    }
+
+    @media (max-width: 767px) {
+        .info-perfil {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .info-perfil p {
+            text-align: center;
+        }
+
+        .h2-home {
+            text-align: center !important;
+        }
+    }
+
+</style>
