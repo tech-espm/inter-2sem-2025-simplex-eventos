@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-	<h1>Sou a página de eventos!</h1>
+	<h1>Descubra Eventos <span>Incríveis</span></h1>
 
 	<p>Listagem de produtos (<%= produtos.length %> produtos no total)</p>
 
@@ -23,3 +23,19 @@
 	<% } %>
 
 </div>
+
+<%- contentFor("espaco-head") %>
+
+<style>
+
+	.conteudo {
+		min-height: 80vh;
+		background-image: url(/public/img/fundo.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		color: white;
+	}
+
+</style>
