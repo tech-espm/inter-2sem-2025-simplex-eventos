@@ -10,35 +10,48 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8">
                 
-                <div class="fundo-coluna borda" style="padding: 30px;">
-                    <div class="row align-items-center">
-                        
-                        <div class="col-md-4 alinhar-col">
-                            
-                            <img src="https://avatar.iran.liara.run/public/girl?username=ana.silva" alt="Foto de Perfil" class="img-fluid rounded-circle borda" style="width: 150px; height: 150px; object-fit: cover;">
-                            
-                            <a href="/editar-perfil" class="btn btn-primary d-block mt-3" style="background-color: rgb(41,137,216); border-color: rgb(41,137,216);">
-                                Editar Perfil
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-8 info-perfil">
+                <div class="borda alinhar-col card-perfil">
+                    
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Foto de Perfil" 
+                         class="img-fluid rounded-circle borda" 
+                         style="width: 150px; height: 150px; object-fit: cover; margin-bottom: 20px;">
+                    
+                    <h2 class="h2-home" style="margin-bottom: 20px;">Nome do Usuário</h2>
 
-                            <h2 class="h2-home" style="text-align: left; margin-bottom: 20px;">Ana Silva</h2>
-                            <p>
-                                <i class="fas fa-envelope"></i> ana.silva@simplex.com
-                            </p>
-                            <p>
-                                <i class="fas fa-calendar-alt"></i> Membro desde: 15 de Março de 2024
-                            </p>
-                            <p>
-                                <i class="fas fa-ticket-alt"></i> Eventos criados: 3
-                            </p>
-                            <br>
-                            <a href="/logout" class="btn btn-outline-light">
-                                Sair da Conta
-                            </a>
-                        </div>
+                    <div class="info-perfil">
+                        <p>
+                            <i class="fas fa-envelope"></i> email.do.usuario@exemplo.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i> +351 900 000 000
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Lisboa, Portugal
+                        </p>
+                        <p>
+                            <i class="fas fa-calendar-alt"></i> Membro desde: 31 de Outubro de 2025
+                        </p>
+                        <p>
+                            <i class="fas fa-ticket-alt"></i> Eventos criados: 3
+                        </p>
+                    </div>
+
+                    <div class="info-bio">
+                        <h5 class="bio-titulo">Sobre mim</h5>
+                        <p class="bio-texto">
+                            "Organizador de eventos apaixonado por tecnologia e design. Conectando pessoas através de experiências memoráveis."
+                        </p>
+                    </div>
+                    <br>
+
+                    <div>
+                        <a href="/editar-perfil" class="btn btn-primary" 
+                           style="background-color: rgb(41,137,216); border-color: rgb(41,137,216); margin: 5px;">
+                            Editar Perfil
+                        </a>
+                        <a href="/logout" class="btn btn-outline-secondary" style="margin: 5px;">
+                            Sair da Conta
+                        </a>
                     </div>
                 </div>
             </div>
@@ -50,49 +63,54 @@
                 <h5 class="h5-recursos">Eventos que você criou ou está participando</h5>
             </div>
 
-            <div class="col-sm-6 col-md-4 espacador-coluna">
-                <div class="fundo-coluna borda">
-                    <h2>Conferência de Tecnologia</h2>
-                    <p>Data: 01/12/2025</p>
-                    <p>Status: <span style="color: #28a745;">Ativo</span></p>
-                    <a href="#" class="btn btn-outline-light btn-sm">Gerenciar Evento</a>
+            <div class="col-md-10 col-lg-8 espacador-coluna">
+                <div class="borda card-perfil">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 alinhar-col" style="padding: 15px;">
+                            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                 alt="Imagem Evento" class="img-fluid borda">
+                        </div>
+                        <div class="col-md-8 evento-info">
+                            <h2>Conferência de Tecnologia</h2>
+                            <p><i class="fas fa-calendar-day"></i> Data: 01/12/2025</p>
+                            <p><i class="fas fa-map-pin"></i> Local: Centro de Convenções Principal</p>
+                            <p><i class="fas fa-users"></i> Inscritos: 150 / 200</p>
+                            <p>Status: <span style="color: #28a745;">Ativo</span></p>
+                            <a href="#" class="btn btn-primary btn-sm" style="background-color: rgb(41,137,216); border-color: rgb(41,137,216);">Gerenciar Evento</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-sm-6 col-md-4 espacador-coluna">
-                <div class="fundo-coluna borda">
-                    <h2>Workshop de Design</h2>
-                    <p>Data: 15/01/2026</p>
-                    <p>Status: <span style="color: #ffc107;">Rascunho</span></p>
-                    <a href="#" class="btn btn-outline-light btn-sm">Continuar Edição</a>
+            <div class="col-md-10 col-lg-8 espacador-coluna">
+                <div class="borda card-perfil">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 alinhar-col" style="padding: 15px;">
+                            <img src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                 alt="Imagem Evento" class="img-fluid borda">
+                        </div>
+                        <div class="col-md-8 evento-info">
+                            <h2>Workshop de Design</h2>
+                            <p><i class="fas fa-calendar-day"></i> Data: 15/01/2026</p>
+                            <p><i class="fas fa-map-pin"></i> Local: Coworking ArtSpace</p>
+                            <p><i class="fas fa-users"></i> Inscritos: 25 / 30</p>
+                            <p>Status: <span style="color: #ffc107;">Rascunho</span></p>
+                            <a href="#" class="btn btn-primary btn-sm" style="background-color: rgb(41,137,216); border-color: rgb(41,137,216);">Continuar Edição</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-sm-6 col-md-4 espacador-coluna">
-                <div class="fundo-coluna borda">
-                    <h2>Encontro Comunitário</h2>
-                    <p>Data: 01/09/2025</p>
-                    <p>Status: <span style="color: #dc3545;">Concluído</span></p>
-                    <a href="#" class="btn btn-outline-light btn-sm">Ver Detalhes</a>
-                </div>
-            </div>
         </div>
-
     </div>
 </div>
 
-
 <%- contentFor("espaco-head") %>
 <style>
-
 	.conteudo {
 		min-height: 80vh;
-		background-image: url(/public/img/fundo.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		color: white;
+		background-color: #f0f5fa;
+		color: #212529;
 	}
 
 	.titulo-simplex{
@@ -102,23 +120,24 @@
 	.h1-home{
 		font-size: 50px;
 		text-align: center;
-		color: white;
+		color: #212529;
 	}
 
 	.h2-home{
 		text-align: center;
-		color: white;
+		color: #212529;
 	}
 
 	.h1-sobre{
 		padding-bottom: 15px;
-        color: white;
+        color: #212529; 
 	}
 
 	.borda{
 		border-radius: 20px;
-		border-color: white;
+		border-color: #dee2e6;
 		border-style: solid;
+        border-width: 1px;
 	}
 
 	.alinhar-col{
@@ -127,44 +146,68 @@
 
 	.h5-recursos{
 		padding-bottom: 60px;
-        color: white;
-	}
-
-	.fundo-coluna {
-		background-color: rgb(19, 3, 125);
-		padding: 15px;
-		border-radius: 5px;
-		min-height: 100%;
+        color: #6c757d; 
 	}
 
 	.espacador-coluna {
 		padding: 12px;
 	}
+
+    .card-perfil {
+        padding: 30px; 
+        background-color: #ffffff; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
     
     .info-perfil p {
-        font-size: 1.1rem;
+        font-size: 1.1rem; 
         margin-bottom: 10px;
-        text-align: left;
     }
 
     .info-perfil i {
         margin-right: 12px;
-        color: rgb(41,137,216);
-        width: 20px;
+        color: rgb(41,137,216); 
+        width: 20px; 
+    }
+
+    .info-bio {
+        margin-top: 20px;
+    }
+    .bio-titulo {
+        color: rgb(41,137,216); 
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    .bio-texto {
+        font-style: italic;
+        color: #6c757d; 
+        font-size: 0.95rem;
+    }
+
+    .evento-info {
+        text-align: left; 
+        padding: 15px; 
+    }
+    
+    .evento-info i {
+        margin-right: 10px;
+        width: 15px;
+    }
+
+    .evento-info h2 {
+        color: #212529; 
+        font-size: 1.8rem; 
+        margin-bottom: 15px;
     }
 
     @media (max-width: 767px) {
-        .info-perfil {
-            text-align: center;
-            margin-top: 30px;
+        .evento-info {
+            text-align: center; 
+            margin-top: 20px; 
         }
 
-        .info-perfil p {
-            text-align: center;
-        }
-
-        .h2-home {
-            text-align: center !important;
+        .evento-info h2 {
+            font-size: 1.5rem; 
         }
     }
 
