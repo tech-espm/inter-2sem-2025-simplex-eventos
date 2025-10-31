@@ -1,11 +1,222 @@
-﻿<div class="container-fluid">
-
-	<h1>
-		SimpleX
+﻿<div class="secao1">
+	<h1 class="h1-home">
+		Simple<span class="titulo-simplex">X</span>
 	</h1>
 
-	<p>
-		Oi, mundo! 😊
-	</p>
-
+	<h2 class="h2-home">
+		Eventos <span class="titulo-simplex">simples</span>, momentos <span class="titulo-simplex">inesquecíveis</span>
+	</h2>
 </div>
+
+<div class="secao2">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+				<h1 class="h1-sobre">Sobre nós</h1>
+				<p>
+					A SIMPLEX nasceu da crença de que eventos extraordinários emergem da simplicidade elegante. Somos uma plataforma que transforma a complexidade da organização de eventos em uma experiência intuitiva e prazerosa.
+				</p>
+				<p>
+					Nossa missão é democratizar a criação de eventos memoráveis, oferecendo ferramentas profissionais com a simplicidade que qualquer pessoa pode dominar.
+				</p>
+
+				<p>
+                    <img width="20" src="https://imagepng.org/check-icone/check-icone-1/"/>
+					  Interface intuitiva e moderna
+                </p>
+
+				<p>
+                    <img width="20" src="https://imagepng.org/check-icone/check-icone-1/"/>
+					  Ferramentas fáceis de usar
+                </p>
+
+				<p>
+                    <img width="20" src="https://imagepng.org/check-icone/check-icone-1/"/>
+					  Crie os seus eventos de forma simples e profissional
+                </p>
+
+			</div>
+
+			<div class="col-sm-6">
+				<img class='borda' width="700" src="https://static-cse.canva.com/blob/1534622/eventocorporativo1.45438858.jpg"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid alinhar-col">
+
+			<div class="row">
+
+				<div class="col-sm-3 espacador-coluna">
+					<div class="dado-fake">
+						<h1>
+							1.500 +
+						</h1>
+						<p>
+							Eventos Criados
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-3 espacador-coluna">
+					<div class="dado-fake">
+						<h1>
+							500K +
+						</h1>
+						<p>
+							Participantes
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-3 espacador-coluna">
+					<div class="dado-fake">
+						<h1>
+							98%
+						</h1>
+						<p>
+							Taxa De Sucesso
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-3 espacador-coluna">
+					<div class="dado-fake">
+						<h1>
+							4.9/5
+						</h1>
+						<p>
+							Avaliação Média
+						</p>
+					</div>
+				</div>
+</div>
+
+<div class="container-fluid secao3">
+
+	<h1 class="alinhar-col">Recursos que Fazem a Diferença</h1>
+	<h5 class="alinhar-col h5-recursos">Descubra as ferramentas que tornam a criação e gestão de eventos uma experiência simples e eficiente</h5>
+
+			<div class="row alinhar-col justify-content-center">
+
+				<div class="col-sm-6 col-md-4 espacador-coluna">
+					<div class="fundo-coluna borda">
+						<p>
+							<img width="80" src="https://cdn-icons-png.flaticon.com/512/5969/5969559.png" />
+						</p>
+						<h2>
+							Design Intuitivo
+						</h2>
+						<p>
+							Nosso site foi criado para que você organize seus eventos de forma simples e rápida. Com uma interface moderna e fácil de usar, cada botão e funcionalidade foi pensada para tornar sua experiência prática e agradável
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 espacador-coluna">
+					<div class="fundo-coluna borda">
+						<p>
+							<img  width="80" src="https://images.vexels.com/media/users/3/234467/isolated/preview/74f0609f9316051f07af9de18f1b977c-traco-colorido-do-alarme-do-relogio-analogico.png" />
+						</p>
+						<h2>
+							Criação Rápida
+						</h2>
+						<p>
+							Transforme suas ideias em eventos reais em questão de minutos. Nossa plataforma simplifica cada etapa, desde o cadastro até a publicação, para que você possa criar, ajustar e lançar seu evento sem complicações.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 espacador-coluna">
+					<div class="fundo-coluna borda">
+						<p>
+							<img width="80" src="https://cdn-icons-png.flaticon.com/512/8899/8899687.png" />
+						</p>
+						<h2>
+							Dashboards
+						</h2>
+						<p>
+							Gerencie seus eventos de forma prática e rápida! Nosso painel centraliza todas as informações importantes, como inscrições, confirmações e detalhes do evento. Com ele, você acompanha tudo!
+						</p>
+					</div>
+				</div>
+			</div>
+</div>
+
+
+<%- contentFor("espaco-head") %>
+<style>
+
+	.conteudo {
+		min-height: 80vh;
+		background-image: url(/public/img/fundo.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		color: white;
+	}
+
+	.secao1{
+		padding: 20vh 20px;
+	}
+
+	.titulo-simplex{
+	color: rgb(41,137,216);
+}
+
+.h1-home{
+	font-size: 50px;
+	text-align: center;
+	color: white;
+}
+
+.h2-home{
+	text-align: center;
+	color: white;
+}
+
+.secao2{
+	padding-bottom: 120px;
+}
+
+.dado-fake{
+	background-color: transparent;
+}
+
+.h1-sobre{
+	padding-bottom: 15px;
+}
+
+.borda{
+	border-radius: 20px;
+	border-color: white;
+	border-style: solid;
+}
+
+.alinhar-col{
+	text-align: center;
+}
+
+.h5-recursos{
+	padding-bottom: 60px;
+}
+
+.fundo-coluna {
+	background-color: rgb(19, 3, 125);
+	padding: 15px;
+	border-radius: 5px;
+	min-height: 100%;
+}
+
+.secao3{
+	padding-bottom: 60px;
+	padding-top: 120px;
+}
+
+.espacador-coluna {
+	padding: 12px;
+}
+
+</style>
