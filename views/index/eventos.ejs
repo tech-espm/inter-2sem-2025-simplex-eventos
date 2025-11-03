@@ -1,27 +1,53 @@
 <div class="container-fluid">
 
-	<h1>Descubra Eventos <span>Incríveis</span></h1>
+	<nav class="navbar2" data-bs-theme="light">
+		<nav class="navbar2">
+		<div class="container-fluid-barra">
+			<form class="d-flex" role="pesquisar">
+			<input class="form-control me-2" type="pesquisar" placeholder="Pesquisar Eventos" aria-label="Pesquisar Eventos"/>
+			<button class="btn btn-outline-success botao-pesquisa" type="submit"><img width='25' src="https://marketplace.canva.com/LLr8M/MAD4NGLLr8M/1/tl/canva-magnify-MAD4NGLLr8M.png" alt=""></button>
+			</form>
+		</div>
+		</nav>
+	</nav>
 
-	<p>Listagem de produtos (<%= produtos.length %> produtos no total)</p>
+	<h1 class="titulo">Descubra Eventos <span class='cor-simplex'>Incríveis</span></h1>
 
-	<% for (let contador = 0; contador < produtos.length; contador++) { %>
+	<p class="listagem">Listagem de Eventos (<%= eventos.length %> eventos no total)</p>
 
-		<h2>
-			<%= produtos[contador].nome %>
-		</h2>
+	<div class="row">
+	<% for (let contador = 0; contador < eventos.length; contador++) { %>
 
-		<p>
-			Id: <%= produtos[contador].id %>
-		</p>
-
-		<p>
-			Valor: R$ <%= produtos[contador].valor %>
-		</p>
-
-		<hr />
+		<div class="col-sm-3 col-md-3 col-lg-3 espacador-coluna">
+			<div class="card h-100">
+				<img src='/public/img/eventos/<%= eventos[contador].id %>.jpg' class="card-img-top" alt="Foto Evento">
+				<div class="card-body d-flex flex-column">
+					<h4>
+						<%= eventos[contador].nome %>
+					</h4>
+					<div style="flex: 1 1 auto;">
+						
+					</div>
+					<p class="rodape-card">
+						Data: <%= eventos[contador].data %></p>
+					<p>
+						Valor: R$ <%= eventos[contador].valor %>
+					</p>
+					<a class="link2" href="link pro java a ser colocado (inscrição para todos eventos)">
+                Inscreva-se
+        			</a>
+				</div>
+			</div>
+		</div>
 
 	<% } %>
+	</div>
 
+</div>
+<div class="botao">
+<a class="link1" href="link pro java a ser colocado">
+                Crie Seu Evento
+        </a>
 </div>
 
 <%- contentFor("espaco-head") %>
@@ -37,5 +63,75 @@
 		background-attachment: fixed;
 		color: white;
 	}
+
+	.titulo{
+		text-align: center;
+		font-size: 40px;
+		padding-top: 55px;
+	}
+
+	.listagem{
+		text-align: center;
+		padding-bottom: 35px;
+	}
+
+	.cor-simplex{
+		color: rgb(25, 134, 223);
+	}
+
+	.espacador-coluna{
+	padding: 12px;
+	min-height: 100%;
+	}
+
+	.rodape-card{
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.navbar2{
+		margin: 0px auto 0px auto;
+		border-radius: 10px;
+		padding-top: 12px;
+	}
+
+	.botao-pesquisa {
+		background-color: white;
+	}
+
+	.botao-pesquisa:hover {
+		background-color:  rgb(25, 134, 223);
+	}
+
+	.botao{
+		padding-top: 60px;
+		text-align: center;
+		padding-bottom: 45px;
+	}
+
+	.link1 {
+			display: inline-block;
+			background-color: rgb(17, 68, 169);
+			font-size: 18px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			padding: 18px 30px;
+			border-radius: 10px;
+			text-decoration: none;
+			border-style: solid;
+			border-color: white;
+        }
+
+	.link2 {
+		display: inline-block;
+		background-color: rgb(17, 68, 169);
+		font-size: 13px;
+		font-weight: bold;
+		color: rgb(255, 255, 255);
+		padding: 10px 20px;
+		border-radius: 99999px;
+		text-decoration: none;
+		text-align: center;
+    }
 
 </style>

@@ -117,7 +117,7 @@ app.use("/", require("./routes/index"));
 app.use((err, req, res, next) => {
 	res.status(err.status || 500);
 
-	res.render("erro", { mensagem: err.message });
+	res.json({ mensagem: err.message });
 });
 
 const ip = process.env.IP || "127.0.0.1";
