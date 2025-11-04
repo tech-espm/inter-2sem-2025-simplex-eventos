@@ -1,66 +1,51 @@
 <div class="fundo">
     <t class="titulo"> Sobre a Equipe</t>
-    <div class="col-sm-6 col-md-4 espacador-coluna" >
-    <div class="colunas">
-        João Vitor Yazbek
-        <div class="">
-            <a class="botao" href="https://www.linkedin.com/in/jo%C3%A3o-vitor-yazbek-106441351/">
-                linkedin
-            </a>
-            <img src="/public/img/joao.jpg" alt="João" class="imagem">
+<div class="container">
 
-        </div>
-    </div> 
-</div>
-<div class="col-sm-6 col-md-4 espacador-coluna" >
-    <div class="colunas">
-        Ícaro Dias Marcolino
-        <div class="">
-            <a class="botao" href="https://www.linkedin.com/in/icaro-dias-046686339/">
-                linkedin
-            </a>
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFKfIe4hSPC3g/profile-displayphoto-scale_200_200/B4DZjnDke3IEAc-/0/1756223130300?e=1763596800&v=beta&t=Pbo7d2KVdKqVpAqA4yNvsZUS7DO6HXDQuRO2PZguSWY" alt="Ícaro" class="imagem">
-
-        </div>
-    </div> 
-</div>
-<div class="col-sm-6 col-md-4 espacador-coluna" >
-    <div class="colunas">
-        Luccas Tofano
-        <div class="">
-            <a class="botao" href="https://www.linkedin.com/in/luccas-toffano-694952350/">
-                linkedin
-            </a>
-            <img src="/public/img/Tofano.jpg" alt="João" class="imagem">
-        </div>
-        
-    </div> 
-    <div class="col-sm-6 col-md-4 espacador-coluna" >
-    <div class="colunas">
-        Gustavo Lopez
-        <div class="">
-            <a class="botao" href="https://www.linkedin.com/in/gustavo-carvalho-b80371351/">
-                linkedin
-            </a>
-            <img src="/public/img/Gustavo.jpeg" alt="João" class="imagem">
-
-        </div>
-    </div> 
-</div>
-<div class="col-sm-6 col-md-4 espacador-coluna" >
-    <div class="colunas">
-        Ricardo de Mateo
-        <div class="">
-            <a class="botao" href="https://www.linkedin.com/in/ricardo-m-0b9665307/">
-                linkedin
-            </a>
-            <img src="/public/img/Ricardo.jpeg" alt="João" class="imagem">
-
-        </div>
+    <!-- Coluna 1 -->
+    <div class="coluna">
+      <div class="nome">João Vitor Yazbek</div>
+      <img src="/public/img/joao.jpg" alt="João" class="imagem">
+      <a class="botao" href="https://www.linkedin.com/in/jo%C3%A3o-vitor-yazbek-106441351/" target="_blank">
+        LinkedIn
+      </a>
     </div>
-   
-
-<%- contentFor("espaco-head") %>
+     <div class="coluna">
+      <div class="nome">Icaro Dias</div>
+      <img src="/public/img/Icaro.jpg" alt="Icaro" class="imagem">
+      <a class="botao" href="https://www.linkedin.com/in/icaro-dias-046686339/" target="_blank">
+        LinkedIn
+      </a>
+    </div>
+    <div class="coluna">
+      <div class="nome">Luccas Toffano</div>
+      <img src="/public/img/Tofano.jpg" alt="Luccas" class="imagem">
+      <a class="botao" href="https://www.linkedin.com/in/luccas-toffano-694952350/" target="_blank">
+        LinkedIn
+      </a>
+    </div>
+    <div class="coluna">
+      <div class="nome">Ricardo de Mateo</div>
+      <img src="/public/img/Ricardo.jpeg" alt="Ricardo" class="imagem">
+      <a class="botao" href="https://www.linkedin.com/in/ricardo-m-0b9665307/" target="_blank">
+        LinkedIn
+      </a>
+    </div> 
+    <div class="coluna">
+        <div class="nome">Kayla Abreu</div>
+        <img src="/public/img/Kayla.jpg" alt="Kayla" class="imagem">
+        <a class="botao" href="https://www.linkedin.com/in/kayla-abreu-573599353/" target="_blank">
+            LinkedIn
+        </a>
+    </div>
+    <div class="coluna">
+      <div class="nome">Gustavo Carvalho</div>
+      <img src="/public/img/Gustavo.jpeg" alt="Gustavo" class="imagem">
+      <a class="botao" href="https://www.linkedin.com/in/gustavo-carvalho-b80371351/" target="_blank">
+        LinkedIn
+      </a>
+    </div>
+    <%- contentFor("espaco-head") %>
 <style>
     .titulo{
         color: rgb(41,137,216);
@@ -78,14 +63,15 @@
     .espacador-coluna {
 	padding: 12px;
 }
-    .colunas{
-        font-size: 25px;
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: blue;
-        background-size: 150px;
-    
+    .coluna{
+flex: 1 1 calc(33.333% - 20px);  
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    
     .botao{
             text-decoration: none;
         display: inline-block;
@@ -101,5 +87,32 @@
         border-radius: 100px;
         size: 50px;
     }
-    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 10px; 
+    }
+    .imagem {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%; 
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .botao {
+      display: inline-block;
+      background-color: #0077b5; /* cor do LinkedIn */
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .nome {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
 </style>
