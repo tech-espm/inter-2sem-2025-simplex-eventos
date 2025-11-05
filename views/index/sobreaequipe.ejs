@@ -1,68 +1,76 @@
-<div class="fundo">
-    <t class="titulo"> Sobre a Equipe</t>
+<div class="img-fundo">
+    <h1 class="titulo"> Nossa Equipe</h1>
 <div class="container">
 
     <!-- Coluna 1 -->
-    <div class="coluna">
+    <div class="coluna card-sobre">
       <div class="nome">João Vitor Yazbek</div>
       <img src="/public/img/joao.jpg" alt="João" class="imagem">
       <a class="botao" href="https://www.linkedin.com/in/jo%C3%A3o-vitor-yazbek-106441351/" target="_blank">
         LinkedIn
       </a>
     </div>
-     <div class="coluna">
+     <div class="coluna card-sobre">
       <div class="nome">Icaro Dias</div>
       <img src="/public/img/Icaro.jpg" alt="Icaro" class="imagem">
       <a class="botao" href="https://www.linkedin.com/in/icaro-dias-046686339/" target="_blank">
         LinkedIn
       </a>
     </div>
-    <div class="coluna">
+    <div class="coluna card-sobre">
       <div class="nome">Luccas Toffano</div>
       <img src="/public/img/Tofano.jpg" alt="Luccas" class="imagem">
       <a class="botao" href="https://www.linkedin.com/in/luccas-toffano-694952350/" target="_blank">
         LinkedIn
       </a>
     </div>
-    <div class="coluna">
+    <div class="coluna card-sobre">
       <div class="nome">Ricardo de Mateo</div>
       <img src="/public/img/Ricard0.jpeg" alt="Ricardo" class="imagem">
       <a class="botao" href="https://www.linkedin.com/in/ricardo-m-0b9665307/" target="_blank">
         LinkedIn
       </a>
     </div> 
-    <div class="coluna">
+    <div class="coluna card-sobre">
         <div class="nome">Kayla Abreu</div>
         <img src="/public/img/Kayla.jpg" alt="Kayla" class="imagem">
         <a class="botao" href="https://www.linkedin.com/in/kayla-abreu-573599353/" target="_blank">
             LinkedIn
         </a>
     </div>
-    <div class="coluna">
+    <div class="coluna card-sobre">
       <div class="nome">Gustavo Carvalho</div>
       <img src="/public/img/Gustavo.jpeg" alt="Gustavo" class="imagem">
       <a class="botao" href="https://www.linkedin.com/in/gustavo-carvalho-b80371351/" target="_blank">
         LinkedIn
       </a>
     </div>
+
+
     <%- contentFor("espaco-head") %>
 <style>
-    .titulo{
-        color: rgb(41,137,216);
-        font-size: 50px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .fundo{
-        background-image: url(http://static.vecteezy.com/system/resources/previews/007/278/150/non_2x/dark-background-abstract-with-light-effect-vector.jpg);
-        background-position: center;
+
+    .img-fundo {
+		min-height: 80vh;
+		background-image: url(/public/img/FundoEquipe.jpg);
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
-        min-height: 80vh;
+    max-width: 100%;
+	}
+    
+    .titulo{
+      text-align: center;
+      font-size: 40px;
+      padding-top: 55px;
+      color: white;
     }
+
     .espacador-coluna {
 	padding: 12px;
 }
+
     .coluna{
 flex: 1 1 calc(33.333% - 20px);  
       background-color: #f0f0f0;
@@ -70,6 +78,10 @@ flex: 1 1 calc(33.333% - 20px);
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card-sobre:hover {
+      transform: translateY(-5px);
     }
     
     .botao{
