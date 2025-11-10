@@ -32,6 +32,45 @@ router.get("/dashboard", wrap(async (req, res) => {
 	res.render("index/dashboard", opcoes);
 }));
 
+router.get("/criarevento", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Criar evento"
+	};
+
+	res.render("index/criarevento", opcoes);
+}));
+
+router.post("/api/criarevento", wrap(async (req, res) => {
+	let evento = req.body;
+
+	if (!evento.nome) {
+		res.status(400).json("Nome inválido!");
+		return;
+	}
+
+	if (!evento.descricao) {
+		res.status(400).json("Descrição inválida");
+		return;
+	}
+
+	await sql.connect(async sql => {
+		// Tudo aqui dentro é executado com a conexão aberta!
+
+		let parametros = [
+			evento.nome,
+			evento.descricao
+		]
+
+		evento = await sql.query("insert into evento (nome, descricao) values (?, ?)", parametros);
+
+		//...
+
+	});
+
+	res.json(true);
+
+}));
+
 router.get("/eventos", wrap(async (req, res) => {
 	let eventos;
 
