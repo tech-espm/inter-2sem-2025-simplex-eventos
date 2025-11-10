@@ -53,15 +53,45 @@ router.post("/api/criarevento", wrap(async (req, res) => {
 		return;
 	}
 
+	if (!evento.endereco) {
+		res.status(400).json("Endereço inválido");
+		return;
+	}
+
+	if (!evento.categoria) {
+		res.status(400).json("Categoria inválida");
+		return;
+	}
+
+	if (!evento.valor) {
+		res.status(400).json("Valor inválido");
+		return;
+	}
+
+	if (!evento.capacidade) {
+		res.status(400).json("Capacidade inválida");
+		return;
+	}
+
+	if (!evento.data) {
+		res.status(400).json("Data inválida");
+		return;
+	}
+
 	await sql.connect(async sql => {
 		// Tudo aqui dentro é executado com a conexão aberta!
 
 		let parametros = [
 			evento.nome,
-			evento.descricao
+			evento.descricao,
+			evento.endereco,
+			evento.categoria,
+			evento.valor,
+			evento.capacidade,
+			evento.data
 		]
 
-		evento = await sql.query("insert into evento (nome, descricao) values (?, ?)", parametros);
+		evento = await sql.query("insert into evento (nome, descricao, endereco, categoria, valor, capacidade, data) values (?, ?, ?, ?, ?, ?, ?)", parametros);
 
 		//...
 

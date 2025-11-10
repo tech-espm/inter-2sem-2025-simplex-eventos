@@ -1,27 +1,120 @@
-<div class="container-fluid">
+<style>
+    .conteudo {
+	background-image: url(/public/img/FundoEquipe.jpg);
+    color:white;        
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    min-height: 80vh;
+}
 
-    <div class="row">
-        <div class="col-sm-6">
+.form-group {
+    display: flex;
+    flex-direction: column; /* Faz o label ficar em cima do input/select */
+}
+
+.categoria-data {
+    padding: 8px;
+    background: white;
+    width: 100%; /* ocupa toda a largura disponível */
+}
+
+.rows-criar-evento {
+    margin: 0px 3px;
+}
+
+.h1-criar-evento {
+    margin: 50px 0px 50px;
+    text-align: center;
+}
+
+.botao-criar-evento {
+    margin: 20px 0px 0px;
+}
+</style>
+
+<div class="container-fluid conteudo">
+
+    <h1 class="h1-criar-evento">
+        Criando seu evento com a SimpleX
+    </h1>
+
+    <div class="row rows-criar-evento">
+        <div class="col-sm-4">
             <div class="mb-3">
                 <label class="from-label" for="inputNome">Nome</label>
-                <input class="form-control" type="text" maxlength="100" id="inputNome"/>
+                <input class="form-control" type="text" maxlength="100" id="inputNome" placeholder="Insira o nome do evento"/>
             </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="mb-3">
                 <label class="from-label" for="inputDescricao">Descrição</label>
-                <input class="form-control" type="text" maxlength="100" id="inputDescricao"/>
+                <input class="form-control" type="text" maxlength="100" id="inputDescricao" placeholder="Insira uma descrição para o evento"/>
             </div>
         </div>
 
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="from-label" for="inputEndereco">Endereço</label>
+                <input class="form-control" type="text" maxlength="100" id="inputEndereco" placeholder="Insira o local do evento"/>
+            </div>
+        </div>
     </div>
 
-    <div class="text-center">
+    <div class="row rows-criar-evento">
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="from-label" for="inputValor">Valor do ingresso</label>
+                <input class="form-control" type="text" maxlength="100" id="inputValor" placeholder="Insira o valor do ingresso"/>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="from-label" for="inputCapacidade">Capacidade de pessoas no evento</label>
+                <input class="form-control" type="text" maxlength="100" id="inputCapacidade" placeholder="Insira a capacidade do evento"/>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="from-label form-group" for="inputData">Data e hora do evento:</label>
+                <input class="categoria-data form-control" type="datetime-local" id="inputData" placeholder="Insira data e horário do evento">
+            </div>
+        </div>
+    </div>
+
+    <div class="row rows-criar-evento">
+        
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="from-label form-group" for="inputCategoria">Categoria</label>
+                <select class="categoria-data" id="inputCategoria">
+                    <option value="">Selecione...</option>
+					<option value="Anivresario">Aniversário</option>
+					<option value="Casamento">Casamento</option>
+					<option value="Formatura">Casamento</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+        
+    </div>
+
+    <div class="text-center botao-criar-evento">
         <button type="button" class="btn btn-primary" onclick="criarEvento()">Criar evento</button>
     </div>
 
 </div>
+
+<%- contentFor("espaco-head") %>
 
 <script type="text/javascript">
     
@@ -29,25 +122,66 @@
            
             let inputNome = document.getElementById("inputNome");
             let inputDescricao = document.getElementById("inputDescricao");
+            let inputEndereco = document.getElementById("inputEndereco");
+            let inputValor = document.getElementById("inputValor");
+            let inputCapacidade = document.getElementById("inputCapacidade");
+            let inputData = document.getElementById("inputData");
+            let inputCategoria = document.getElementById("inputCategoria");
         
             let nome = inputNome.value;
             let descricao = inputDescricao.value;
+            let endereco = inputEndereco.value;
+            let valor = inputValor.value;
+            let capacidade = inputCapacidade.value;
+            let data = inputData.value;
+            let categoria = inputCategoria.value;
             
-           
-
             if (!nome) {
                 alert("Nome inválido!");
                 return;
             }
 
             if (!descricao) {
-                alert("Autor inválido!");
+                alert("Descrição inválida!");
                 return;
             }
 
+            if (!endereco) {
+                alert("Endereço inválido!");
+                return;
+            }
+
+            if (!valor) {
+                alert("Valor inválido!");
+                return;
+            }
+
+            capacidade = parseInt(capacidade);
+
+            if (isNaN(capacidade)) {
+                alert("Capacidade inválida!");
+                return;
+            }
+
+            if (!data) {
+                alert("Data inválida!");
+                return;
+            }
+
+            if (!categoria) {
+                alert("Categoria inválida!");
+                return;
+            }
+
+
             let evento = {
                 nome: nome,
-                descricao: descricao
+                descricao: descricao,
+                endereco: endereco,
+                valor: valor,
+                capacidade: capacidade,
+                data: data,
+                categoria: categoria
             };
 
             try {
@@ -67,6 +201,11 @@
 
                 inputNome.value = "";
                 inputDescricao.value = "";
+                inputEndereco.value = "";
+                inputValor.value = "";
+                inputCategoria.value = "";
+                inputData.value = "";
+                inputCapacidade.value = "";
 
                 alert("Evento criado com sucesso");
 
