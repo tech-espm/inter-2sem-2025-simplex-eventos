@@ -56,6 +56,23 @@ router.get("/editarperfil", wrap(async (req, res) => {
 	res.render("index/editarperfil", opcoes);
 }));
 
+router.get("/editarevento", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Editar Evento"
+	};
+
+	res.render("index/editarevento", opcoes);
+}));
+
+router.get("/editarinscricao", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Editar Inscrição"
+	};
+
+	res.render("index/editarinscricao", opcoes);
+}));
+
+
 router.post("/api/criarevento", wrap(async (req, res) => {
 	let evento = req.body;
 
