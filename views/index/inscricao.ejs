@@ -1,0 +1,113 @@
+<div class="container-fluid">
+    <div class="row justify-content-center ajustar-row">
+        <div class="col-sm-5 fundo-info-evento ajustar-coluna borda alinhar">
+            <h4 class="h4-info-evento">
+                Informações do Evento
+            </h4>
+            <div class="alinhar-info-evento">
+                <p>📌Evento: Conferência de Tecnologia</p>
+                <p>🔖Categoria: Worshop</p>
+                <p>📍Local: Centro de Convenções</p>
+                <p>💰Valor do ingresso: R$70,00</p>
+                <p>✅Status: Em aberto</p>
+                <p>📆Data: 30/11/2025</p>
+                <p>⏰Horário: 19:00</p>
+            </div>
+
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 fundo-info-usuario ajustar-coluna borda">
+            <h4 class="alinhar">
+                Inscrição
+            </h4>
+            <div class="mb-3">
+                <label class="from-label" for="inputNome">Nome</label>
+                <input class="form-control" type="text" maxlength="100" id="inputNome" placeholder="Insira seu nome"/>
+            </div>
+            <div class="mb-3">
+                <label class="from-label" for="inputEmail">E-mail</label>
+                <input class="form-control" type="text" maxlength="100" id="inputEmail" placeholder="Insira seu e-mail"/>
+            </div>
+            <div class="mb-3">
+                <label class="from-label" for="inputCPF">CPF</label>
+                <input class="form-control" type="text" maxlength="15" id="inputCPF" placeholder="Insira seu CPF"/>
+            </div>
+            <div class="mb-3">
+                <label class="from-label form-group" for="inputFormaPag">Forma de pagemento</label>
+                <select id="inputFormaPag" class="forma-pag">
+                    <option value="">Selecione a forma de pagamento</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Debito">Débito</option>
+                    <option value="Credito">Crédito</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button type="button" class="btn btn-primary">Inscrever-se</button>
+    </div>
+</div>
+
+<style>
+.conteudo {
+	background-image: url(/public/img/FundoEquipe.jpg);
+    color:white;        
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Faz o label ficar em cima do input/select */
+}
+
+.forma-pag {
+    padding: 8px;
+    background: white;
+    width: 100%; /* ocupa toda a largura disponível */
+}
+
+.ajustar-row {
+    padding: 70px;
+}
+
+.fundo-info-evento {
+    background-color: rgb(41,137,216);
+    padding: 15px;
+}
+
+.fundo-info-usuario {
+    background-color: white;
+    color:black;
+    padding: 15px;
+}
+
+.ajustar-coluna {
+    padding: 15px;
+}
+
+.borda {
+	border-radius: 20px;
+	border-color: #dee2e6;
+	border-style: solid;
+    border-width: 3px;
+}
+
+.alinhar {
+    text-align: center;
+}
+
+.h4-info-evento {
+    padding-bottom: 15px;
+}
+
+.alinhar-info-evento {
+    text-align: left;
+    padding-left: 25px;   
+}
+
+</style>

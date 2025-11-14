@@ -16,12 +16,12 @@ router.get("/sobreaequipe", wrap(async (req, res) => {
 	res.render("index/sobreaequipe", opcoes);
 }));
 
-router.get("/perfil", wrap(async (req, res) => {
+router.get("/perfil2", wrap(async (req, res) => {
 	let opcoes = {
 		titulo: "Perfil"
 	};
 
-	res.render("index/perfil", opcoes);
+	res.render("index/perfil2", opcoes);
 }));
 
 router.get("/dashboard", wrap(async (req, res) => {
@@ -32,12 +32,28 @@ router.get("/dashboard", wrap(async (req, res) => {
 	res.render("index/dashboard", opcoes);
 }));
 
+router.get("/inscricao", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Inscricao"
+	};
+
+	res.render("index/inscricao", opcoes);
+}));
+
 router.get("/criarevento", wrap(async (req, res) => {
 	let opcoes = {
 		titulo: "Criar evento"
 	};
 
 	res.render("index/criarevento", opcoes);
+}));
+
+router.get("/editarperfil", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Editar Perfil"
+	};
+
+	res.render("index/editarperfil", opcoes);
 }));
 
 router.post("/api/criarevento", wrap(async (req, res) => {
