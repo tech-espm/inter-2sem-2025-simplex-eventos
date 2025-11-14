@@ -16,12 +16,12 @@ router.get("/sobreaequipe", wrap(async (req, res) => {
 	res.render("index/sobreaequipe", opcoes);
 }));
 
-router.get("/perfil2", wrap(async (req, res) => {
+router.get("/perfil", wrap(async (req, res) => {
 	let opcoes = {
 		titulo: "Perfil"
 	};
 
-	res.render("index/perfil2", opcoes);
+	res.render("index/perfil", opcoes);
 }));
 
 router.get("/dashboard", wrap(async (req, res) => {
