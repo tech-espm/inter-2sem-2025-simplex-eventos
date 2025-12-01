@@ -36,8 +36,18 @@ router.get("/dashboard", wrap(async (req, res) => {
 }));
 
 router.get("/inscricao", wrap(async (req, res) => {
+	let id = parseInt(req.query["id"]);
+
+	let eventos;
+
+	await sql.connect(async sql => {
+		eventos = await sql.query("select id, nome, categoria, endereco, valor, date_format(data, '%d/%m/%Y') data, descricao, capacidade from evento where id = ?", [id]);
+	});
+
+
 	let opcoes = {
-		titulo: "Inscricao"
+		titulo: "Inscricao",
+		evento: eventos[0]
 	};
 
 	res.render("index/inscricao", opcoes);
@@ -50,7 +60,7 @@ router.get("/criarevento", wrap(async (req, res) => {
 	await sql.connect(async sql => {
 		// Tudo aqui dentro é executado com a conexão aberta!
 
-		eventos = await sql.query("select id, nome, categoria, endereço, valor, data, descricao, capacidade from evento");
+		eventos = await sql.query("select id, nome, categoria, endereco, valor, data, descricao, capacidade from evento");
 
 		//...
 	});
