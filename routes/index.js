@@ -50,7 +50,7 @@ router.get("/criarevento", wrap(async (req, res) => {
 	await sql.connect(async sql => {
 		// Tudo aqui dentro é executado com a conexão aberta!
 
-		eventos = await sql.query("select id, nome, categoria, endereço, valor, data, descricao, capacidade from evento");
+		eventos = await sql.query("select id, nome, categoria, endereco, valor, data, descricao, capacidade from evento");
 
 		//...
 	});
@@ -164,7 +164,7 @@ router.get("/eventos", wrap(async (req, res) => {
 
 	let opcoes = {
 		titulo: "Eventos",
-		eventos: lista, 
+		eventos: lista
 	};
 
 	res.render("index/eventos", opcoes);
