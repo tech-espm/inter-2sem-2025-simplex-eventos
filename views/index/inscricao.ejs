@@ -5,12 +5,12 @@
                 Informações do Evento
             </h4>
             <div class="alinhar-info-evento">
-                <p>📌 Evento: Conferência de Tecnologia</p>
-                <p>🔖 Categoria: Worshop</p>
-                <p>📍 Local: Centro de Convenções</p>
-                <p>💰 Valor do ingresso: R$70,00</p>
-                <p>✅ Status: Em aberto</p>
-                <p>📆 Data: 30/11/2025</p>
+                <p>📌 Evento: <%= evento.nome %></p>
+                <p>🔖 Categoria: <%= evento.categoria %></p>
+                <p>📍 Local: <%= evento.endereco %></p>
+                <p>💰 Valor do ingresso: R$<%= evento.valor %></p>
+                <p>✅ Capacidade: <%= evento.capacidade %></p>
+                <p>📆 Data: <%= evento.data %></p>
                 <p>⏰ Horário: 19:00</p>
             </div>
 
@@ -46,7 +46,7 @@
     </div>
 
     <div class="text-center">
-        <button type="button" class="btn btn-primary">Inscrever-se</button>
+        <a class="btn btn-primary" href="/eventos">Inscrever-se</a>
     </div>
 </div>
 
