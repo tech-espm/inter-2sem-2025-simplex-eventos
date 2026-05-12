@@ -9,58 +9,73 @@
     min-height: 80vh;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column; /* Faz o label ficar em cima do input/select */
-}
+.h1-editar-evento {
+        text-align: center;
+        padding: 15px;
+    }
 
 .categoria-data {
     padding: 8px;
     background: white;
     width: 100%; /* ocupa toda a largura disponível */
+    border-radius: 8px;
 }
 
-.rows-criar-evento {
-    margin: 0px 3px;
-}
+.campos {
+        padding: 10px;
+        max-width: 500px;
+        margin: auto;
+    }
 
-.h1-criar-evento {
-    margin: 50px 0px 50px;
-    text-align: center;
-}
+.alinhar{
+        text-align: center;
+    }
 
-.botao-criar-evento {
-    margin: 20px 0px 0px;
-}
+.botao {
+        max-width: 500px;
+        margin: auto;
+    }
 
-.cor-simplex{
-    color: rgb(25, 134, 223);
+.botao {
+        display: inline-block;
+		background-color: blue;
+		font-size: 16px;
+		font-weight: bold;
+		color: white;
+        padding: 10px 15px;
+
+		border-radius: 99999px;
+		text-decoration: none;
+    }
+
+.espaco-botao{
+    padding-top: 15px;
 }
 
 </style>
 
 <div class="container-fluid conteudo">
 
-    <h1 class="h1-criar-evento">
+    <h1 class="h1-editar-evento">
         Edite o seu evento
     </h1>
 
     <div class="row rows-criar-evento">
-        <div class="col-sm-4">
+        <div class="col-sm-4 campos">
             <div class="mb-3">
                 <label class="from-label" for="inputNome">Nome</label>
                 <input class="form-control" type="text" maxlength="100" id="inputNome" placeholder="Insira o nome do evento"/>
             </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 campos">
             <div class="mb-3">
                 <label class="from-label" for="inputDescricao">Descrição</label>
                 <input class="form-control" type="text" maxlength="100" id="inputDescricao" placeholder="Insira uma descrição para o evento"/>
             </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 campos">
             <div class="mb-3">
                 <label class="from-label" for="inputEndereco">Endereço</label>
                 <input class="form-control" type="text" maxlength="100" id="inputEndereco" placeholder="Insira o local do evento"/>
@@ -69,21 +84,21 @@
     </div>
 
     <div class="row rows-criar-evento">
-        <div class="col-sm-4">
+        <div class="col-sm-4 campos">
             <div class="mb-3">
                 <label class="from-label" for="inputValor">Valor do ingresso</label>
                 <input class="form-control" type="text" maxlength="100" id="inputValor" placeholder="Insira o valor do ingresso"/>
             </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 campos">
             <div class="mb-3">
                 <label class="from-label" for="inputCapacidade">Capacidade de pessoas no evento</label>
                 <input class="form-control" type="text" maxlength="100" id="inputCapacidade" placeholder="Insira a capacidade do evento"/>
             </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 campos">
             <div class="mb-3">
                 <label class="from-label form-group" for="inputData">Data e hora do evento:</label>
                 <input class="categoria-data form-control" type="datetime-local" id="inputData" placeholder="Insira data e horário do evento">
@@ -95,7 +110,7 @@
         
         <div class="col-sm-4">
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 campos">
             <div class="mb-3">
                 <label class="from-label form-group" for="inputCategoria">Categoria</label>
                 <select class="categoria-data" id="inputCategoria">
@@ -107,16 +122,21 @@
 					<option value="Reuniao">Reunião</option>
 					<option value="Casual">Casual</option>
 					<option value="Cultural">Cultural</option>
+					<option value="Social">Social</option>
                 </select>
             </div>
         </div>
         <div class="col-sm-4">
         </div>
-        
+    </div>
+        <p class="alinhar">
+            <a class="text-center alinhar botao" href="/perfil">
+                Salvar Evento
+            </a>
+        </p>
+        </div>
+    </div>
     </div>
 
-    <div class="text-center botao-criar-evento">
-        <button type="button" class="btn btn-primary" onclick="criarEvento()">Salvar evento</button>
     </div>
-
 </div>
